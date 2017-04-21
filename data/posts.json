@@ -4,28 +4,16 @@
         "es"
     ],
     "posts": [{
-        "date": "21/04/2017 06:14AM",
+        "date": "21/04/2017 08:14AM",
         "author": "Benjamin Simon",
+        "category": "aboutme",
         "en": {
-            "title": "Testing 123",
-            "message": "I am testing the github sites, loading json files."
+            "title": "New beginning",
+            "message": "Hello again! It's me, just starting one more time with this blog. Hopefully this time with regular updates."
         },
         "es": {
-            "title": "Probando 123",
-            "message": "Estoy probando los sitios de github, cargando archivos json."
-        }
-    },
-    {
-        "date": "19/04/2017 08:14AM",
-        "author": "Benjamin Simon",
-        "expand": "id123",
-        "en": {
-            "title": "First Post",
-            "message": "This is my first post, here I can open and read more about this."
-        },
-        "es": {
-            "title": "Primer post",
-            "message": "Este es mi primer post, aqui puedo abrir una ventanita para leer mas."
+            "title": "Nuevo comienzo",
+            "message": "Hola de nuevo! Soy yo, empezando una vez mas este blog. Solo espero actualizarlo mas seguido."
         }
     }]
 }

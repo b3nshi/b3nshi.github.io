@@ -5,6 +5,8 @@
     var vm = this;
 
     vm.lang = 'en';
+    vm.category = '';
+
     $http.get('data/posts.json')
        .then(function(res) {
          vm.posts = res.data.posts;

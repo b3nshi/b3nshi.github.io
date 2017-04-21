@@ -12,6 +12,28 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
+.language {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+}
+
+.language span {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 0 3px;
+  transition: .3s all linear;
+}
+
+.language.en span:first-child,
+.language.es span:last-child {
+  background: #fff;
+  border-radius: 4px;
+}
+
 .hamburguer {
   background: rgba(255, 255, 255, .5);
   border-radius: 4px;
@@ -183,6 +205,7 @@ header.top h1 {
 
 /* Blog posts */
 .posts .wrapper {
+  min-height: 400px;
   overflow: hidden;
   position: relative;
 }

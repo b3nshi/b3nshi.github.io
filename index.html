@@ -23,6 +23,10 @@
         <span></span>
         <span></span>
       </div>
+      <div class="language {{Main.lang}}">
+        <span ng-click="Main.lang = 'en'">EN</span>
+        <span ng-click="Main.lang = 'es'">ES</span>
+      </div>
     </div>
 
     <section class="main-menu" ng-class="{visible: showMenu == 1}">
@@ -49,12 +53,12 @@
           <div class="content">
             <nav class="menu-options">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Technical</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Travel</a></li>
-                <li><a href="#">Other</a></li>
-                <li><a href="#">About me</a></li>
+                <li><a href="#" ng-click="Main.category = ''">Home</a></li>
+                <li><a href="#" ng-click="Main.category = 'technical'">Technical</a></li>
+                <li><a href="#" ng-click="Main.category = 'projects'">Projects</a></li>
+                <li><a href="#" ng-click="Main.category = 'travel'">Travel</a></li>
+                <li><a href="#" ng-click="Main.category = 'other'">Other</a></li>
+                <li><a href="#" ng-click="Main.category = 'aboutme'">About me</a></li>
               </ul>
             </nav>
 
@@ -71,7 +75,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="https://github.com/b3nshi" target="_blank">
                     <i class="fa fa-github"></i>
                   </a>
                 </li>
@@ -92,7 +96,8 @@
 
     <section class="posts">
       <div class="wrapper">
-        <article class="post" ng-repeat="post in Main.posts">
+        <article class="post" ng-repeat="post in Main.posts"
+            ng-if="(Main.category == '') || (Main.category == post.category)">
           <div class="content">
             <h3>{{post[Main.lang].title}}</h3>
             <div class="author">{{post.author}} | {{post.date}}</div>
