@@ -15,7 +15,8 @@ body {
 .language {
   position: fixed;
   top: 60px;
-  right: 20px;
+  right: 15px;
+  z-index: 999;
 }
 
 .language span {
@@ -41,7 +42,7 @@ body {
   font-size: 20px;
   padding: 5px 2px;
   position: fixed;
-  right: 20px;
+  right: 15px;
   top: 25px;
   transition: all .4s ease-in-out;
   width: 40px;
@@ -180,6 +181,21 @@ body {
   background: #666;
 }
 
+@media only screen and (max-width: 768px) {
+  .main-menu {
+    width: 100%;
+  }
+
+  .main-menu > .content {
+    flex-direction: column;
+  }
+
+  .main-menu nav.menu-options,
+  .main-menu .credits {
+    text-align: center;
+  }
+}
+
 /* Blog sections */
 header.top {
   text-align: center;
@@ -188,10 +204,9 @@ header.top {
 header.top h1 {
   color: #fff;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 70px;
+  font-size: 72px;
   font-weight: 400;
-  line-height: 50px;
-  padding: 60px 0 50px;
+  line-height: 100px;
   text-align: center;
   text-shadow: -2px 0px 0px rgba(0,0,0,.1);
   text-transform: capitalize;
@@ -201,6 +216,15 @@ header.top h1 {
   border-top: 2px solid #e5e5e5;
   margin: 0 auto;
   width: 220px;
+}
+
+@media only screen and (max-width: 768px) {
+  header.top h1 {
+    font-size: 48px;
+    line-height: 56px;
+    margin: auto;
+    max-width: 300px;
+  }
 }
 
 /* Blog posts */
@@ -225,57 +249,78 @@ header.top h1 {
   clear: both;
   display: block;
   margin-bottom: 40px;
-  padding-right: 30px;
   padding-top: 60px;
   position: relative;
-  width: 50%;
 }
 
-.posts article:nth-child(even) {
-  float: right;
-  padding-left: 30px;
-  padding-right: 0;
+@media only screen and (min-width: 769px) {
+  .posts article {
+    padding-right: 30px;
+    width: 50%;
+  }
+
+  .posts article:nth-child(even) {
+    float: right;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .posts article:before {
+    background: #e5e5e5;
+    border: 3px solid #f8f8f8;
+    border-radius: 50%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    top: 75px;
+    width: 6px;
+  }
+
+  .posts article:nth-child(odd):before {
+    right: 24px;
+  }
+
+  .posts article:nth-child(even):before {
+    left: 24px;
+  }
+
+  .posts article .content:before {
+    border-bottom: 8px solid transparent;
+    border-top: 8px dashed transparent;
+    content: '';
+    position: absolute;
+    top: 13px;
+  }
+
+  .posts article:nth-child(odd) .content:before {
+    border-left: 8px solid #fff;
+    right: -8px;
+  }
+
+  .posts article:nth-child(even) .content:before {
+    border-right: 8px solid #fff;
+    left: -8px;
+  }
 }
 
-.posts article:before {
-  background: #e5e5e5;
-  border: 3px solid #f8f8f8;
-  border-radius: 50%;
-  content: '';
-  height: 6px;
-  position: absolute;
-  top: 75px;
-  width: 6px;
-}
+@media only screen and (max-width: 768px) {
+  .posts article {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
 
-.posts article:nth-child(odd):before {
-  right: 24px;
-}
-
-.posts article:nth-child(even):before {
-  left: 24px;
-}
-
-.posts article .content {
-  position: relative;
-}
-
-.posts article .content:before {
-  border-bottom: 8px solid transparent;
-  border-top: 8px dashed transparent;
-  content: '';
-  position: absolute;
-  top: 13px;
-}
-
-.posts article:nth-child(odd) .content:before {
-  border-left: 8px solid #fff;
-  right: -8px;
-}
-
-.posts article:nth-child(even) .content:before {
-  border-right: 8px solid #fff;
-  left: -8px;
+  .posts article .content:before {
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px dashed transparent;
+    content: '';
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    right: 50%;
+    top: -8px;
+  }
 }
 
 .posts article .content {
@@ -284,6 +329,7 @@ header.top h1 {
   margin: 0 30px;
   background: #fff;
   padding: 32px 10px 16px;
+  position: relative;
 }
 
 .posts article h3 {
