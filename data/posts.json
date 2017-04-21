@@ -1,0 +1,31 @@
+{
+    "languages": [
+        "en",
+        "es"
+    ],
+    "posts": [{
+        "date": "21/04/2017 06:14AM",
+        "author": "Benjamin Simon",
+        "en": {
+            "title": "Testing 123",
+            "message": "I am testing the github sites, loading json files."
+        },
+        "es": {
+            "title": "Probando 123",
+            "message": "Estoy probando los sitios de github, cargando archivos json."
+        }
+    },
+    {
+        "date": "19/04/2017 08:14AM",
+        "author": "Benjamin Simon",
+        "expand": "id123",
+        "en": {
+            "title": "First Post",
+            "message": "This is my first post, here I can open and read more about this."
+        },
+        "es": {
+            "title": "Primer post",
+            "message": "Este es mi primer post, aqui puedo abrir una ventanita para leer mas."
+        }
+    }]
+}

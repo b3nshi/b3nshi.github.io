@@ -1,0 +1,14 @@
+{
+  "name": "benjaminsimon.com.ar",
+  "homepage": "https://github.com/b3nshi/b3nshi.github.io",
+  "description": "Personal website",
+  "author": "b3nshi@gmail.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
+}

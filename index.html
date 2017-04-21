@@ -1,0 +1,125 @@
+<!doctype html>
+<html ng-app="Blog">
+  <head>
+    <title>Klivr.com</title>
+    <meta charset='UTF-8'/>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic|Open+Sans:400italic,600italic,400,600|Coda:800)' media='screen' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'/>
+
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="lib/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+  </head>
+  <body ng-controller="MainController as Main">
+    <div ng-class="{'open-menu': showMenu == 1}">
+      <div class="hamburguer" ng-click="showMenu = 1 - showMenu;">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <section class="main-menu" ng-class="{visible: showMenu == 1}">
+      <div class="content">
+        <article>
+          <div class="bg"></div>
+          <div class="content">
+            <a href="#" class="logo">
+              <img alt="b3nshi" src="https://2.bp.blogspot.com/-nZ5NbVP2s9U/V-ikaHMHX5I/AAAAAAAAGAs/fN_6sg7tLQMqR8jWHHQu-OSupa2Ph5nrgCK4B/s1600/benja.jpg"/>
+            </a>
+
+            <div class="slogan-wrap">
+              <h3 class="white font3 slogan-text">
+                Happiness is only real, when shared
+              </h3>
+              <h4 class="white font3 slogan-text">
+                La felicidad solo es real cuando se comparte.
+              </h4>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="content">
+            <nav class="menu-options">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Technical</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Other</a></li>
+                <li><a href="#">About me</a></li>
+              </ul>
+            </nav>
+
+            <div class="credits">
+              <ul>
+                <li>
+                  <a href="https://www.twitter.com/b3nshi" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/b3nshi" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <header class="top">
+      <h1>
+        Benjamin Simon
+      </h1>
+    </header>
+
+    <div class="line"></div>
+
+    <section class="posts">
+      <div class="wrapper">
+        <article class="post" ng-repeat="post in Main.posts">
+          <div class="content">
+            <h3>{{post[Main.lang].title}}</h3>
+            <div class="author">{{post.author}} | {{post.date}}</div>
+            <p>
+              {{post[Main.lang].message}}
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="credits">
+      <div class="wrapper">
+        <small>
+          &#169; Copyright 2017
+          <a class="sitename">
+            klivr.com
+          </a>
+        </small>
+        <div class="back-top">
+          <div class="arrow-up">
+            <a class="fa fa-angle-up" href="#top"></a>
+            <span>Back to Top</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
