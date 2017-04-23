@@ -36,7 +36,7 @@
           <div class="bg"></div>
           <div class="content">
             <a href="#" class="logo">
-              <img alt="b3nshi" src="https://2.bp.blogspot.com/-nZ5NbVP2s9U/V-ikaHMHX5I/AAAAAAAAGAs/fN_6sg7tLQMqR8jWHHQu-OSupa2Ph5nrgCK4B/s1600/benja.jpg"/>
+              <img alt="b3nshi" src="img/profile.jpg"/>
             </a>
 
             <div class="slogan-wrap">
@@ -102,8 +102,9 @@
           <div class="content">
             <h3>{{post[Main.lang].title}}</h3>
             <div class="author">{{post.author}} | {{post.date}}</div>
-            <p>
-              {{post[Main.lang].message}}
+            <div class="post-content" ng-bind-html="post[Main.lang].message | renderHtml"></div>
+            <p ng-if="post.article">
+              <a ng-click="Main.openPost(post.article)">{{Main.translations[Main.lang].readMore}}</a>
             </p>
           </div>
         </article>
@@ -127,5 +128,19 @@
       </div>
     </div>
 
+    <div class="modal-post" ng-class="{visible: Main.showModal}">
+      <div class="wrapper">
+        <h3>{{Main.modalPost[Main.lang].title}}</h3>
+        <div class="author">{{Main.modalPost.author}} | {{Main.modalPost.date}}</div>
+        <div class="language {{Main.lang}}">
+          <span ng-click="Main.lang = 'en'">EN</span>
+          <span ng-click="Main.lang = 'es'">ES</span>
+        </div>
+        <div class="close" ng-click="Main.showModal = false">
+          <i class="fa fa-close"></i>
+        </div>
+        <div class="post-content" ng-bind-html="Main.modalPost[Main.lang].message | renderHtml"></div>
+      </div>
+    </div>
   </body>
 </html>

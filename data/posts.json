@@ -3,17 +3,33 @@
         "en",
         "es"
     ],
-    "posts": [{
-        "date": "21/04/2017 08:14AM",
-        "author": "Benjamin Simon",
-        "category": "aboutme",
-        "en": {
-            "title": "New beginning",
-            "message": "Hello again! It's me, just starting one more time with this blog. Hopefully this time with regular updates."
+    "posts": [
+        {
+            "date": "22/04/2017 11:14AM",
+            "author": "Benjamin Simon",
+            "category": "other",
+            "article": "other-1",
+            "en": {
+                "title": "English Tools",
+                "message": "List of tools to work, improve, learn or translate from English to Spanish."
+            },
+            "es": {
+                "title": "Herramientas para mejorar en Inglés",
+                "message": "Listado de herramientas utiles para aprender, escribir o traducir de Ingles a Español."
+            }
         },
-        "es": {
-            "title": "Nuevo comienzo",
-            "message": "Hola de nuevo! Soy yo, empezando una vez mas este blog. Solo espero actualizarlo mas seguido."
+        {
+            "date": "21/04/2017 08:14AM",
+            "author": "Benjamin Simon",
+            "category": "aboutme",
+            "en": {
+                "title": "New beginning",
+                "message": "Hello again! It's me, just starting one more time with this blog. Hopefully this time with regular updates."
+            },
+            "es": {
+                "title": "Nuevo comienzo",
+                "message": "Hola de nuevo! Soy yo, empezando una vez mas este blog. Solo espero actualizarlo mas seguido."
+            }
         }
-    }]
+    ]
 }
